@@ -11,7 +11,9 @@
  *  variable names you will create as they will become input to _other_
  *  functions.
  */
-
+var a = 19;
+var b = 21;
+var c = 50;
 
 /**
  *  #2
@@ -20,6 +22,13 @@
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
+function add(number1, number2){
+	return number1 + number2;
+}
+add(a, b);
+
+var sum = add(a, b)
+console.log(sum);
 
 
 /**
@@ -29,7 +38,15 @@
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
+function subtract(number1, number2){
+	return number1 - number2;
 
+}
+
+subtract(a, b);
+
+var difference = subtract(a, b);
+console.log(difference);
 
 /**
  *  #4
@@ -38,7 +55,13 @@
  *  This function returns the result of multiplying `b` by `a`.
  *  Store this value in a variable named `product`
  */
+function multiply(number1, number2){
+	return number1 * number2;
+}
+multiply(a, b);
 
+var product = multiply(a, b)
+console.log(product);
 
 /**
  *  #5
@@ -50,6 +73,13 @@
  *  value stored in `difference`.
  */
 
+function checkDifference(blue){
+	return "My football team lost " + blue + " times this week";
+}
+
+checkDifference(difference)
+
+console.log(checkDifference(difference));
 
 /**
  *  #6
@@ -61,6 +91,13 @@
  *  stored in the variable `sum`.
  */
 
+function checkSum(blue){
+	return "I CAN ADDZ " + blue + " NUMBERS";
+}
+
+checkSum(sum);
+
+console.log(checkSum(sum));
 
 /**
  *  #7
@@ -70,7 +107,11 @@
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-
+function checkProduct(blue, red){
+	return blue * red;
+}
+checkProduct(product, difference)
+console.log(checkProduct(product, difference));
 
 /**
  *  #8
@@ -85,7 +126,12 @@
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
+function addThenSubtract(blue, red, orange){
+	return blue + red - orange;
+}
 
+addThenSubtract(a, b, c);
+console.log(addThenSubtract(a, b, c));
 
 /**
  *  #9
@@ -98,7 +144,12 @@
  *
  *  Store the return of this function to a variable named `howMany`
  */
+function addThenMultiply(blue, red, orange){
+	return blue + red * orange;
+}
 
+addThenMultiply(a, b, c);
+console.log(addThenMultiply(a, b, c));
 
 /**
  *  #10
@@ -114,8 +165,18 @@
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
+var Z = "Zach";
+var G = "Grace";
 
 
+function createFullName(firstName, lastName){
+	return firstName + lastName;
+}
+
+createFullName(Z, G);
+
+var myFullName = createFullName(Z, G);
+console.log(myFullName);
 /**
  *  #11
  *  Function - verifyDrinkingAge
@@ -130,6 +191,20 @@
  *  **Call this function and pass in a number value.
  *  Store the return value to a variable named** `canDrinkBeer`
  */
+ 
+var myAge = 25
+
+ function verifyDrinkingAge(Age){
+ 	if( Age >= 21 ){
+ 		return true;
+ 	}else{
+ 		return false;
+ 	}
+ }
+verifyDrinkingAge(myAge);
+var canDrinkBeer = verifyDrinkingAge(myAge);
+console.log(canDrinkBeer);
+
 
 
 /**
@@ -141,7 +216,16 @@
  *  "The Party will have tons of Cake!" otherwise this message
  *  should be "This Party will have an open bar".
  */
+function throwParty(Age){
+	if( Age == false ){
+		return "The Party will have lots of Cake!";
+	}else{
+		return "This Party will have an open bar";
+	}
+}
 
+throwParty(canDrinkBeer);
+console.log(throwParty(canDrinkBeer));
 
 /**
  *  #13
@@ -162,7 +246,14 @@
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
+var food = "Laulau";
 
+function eatFood(Name1, Name2, orange){
+	return Name1 + " " + Name2 + " loves to eat " + orange
+}
+
+eatFood(Z, G, food);
+console.log(eatFood(Z, G, food));
 
 /**
  *  #14
@@ -176,3 +267,14 @@
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
+ function howMany(X){
+ 	if(X == true){
+ 		return "Bacon Pancakes, makin' Bacon Pancakes..."
+ 	}else{
+ 		return "Let it go.... LET IT GOOOOOOoOoOoOo..."
+ 	}
+ }
+ howMany(canDrinkBeer);
+ console.log(howMany(canDrinkBeer));
+ 
+//WHEN COMPLETE USE GIT COMMANDS: git status > git add filename > git status > git commit -m "message" > git status > git push > git status
