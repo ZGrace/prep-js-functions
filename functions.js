@@ -149,7 +149,8 @@ function addThenMultiply(blue, red, orange){
 }
 
 addThenMultiply(a, b, c);
-console.log(addThenMultiply(a, b, c));
+var howMany = addThenMultiply(a, b, c);
+console.log(howMany);
 
 /**
  *  #10
@@ -249,7 +250,7 @@ console.log(throwParty(canDrinkBeer));
 var food = "Laulau";
 
 function eatFood(Name1, Name2, orange){
-	return Name1 + " " + Name2 + " loves to eat " + orange
+	return Name1 + " " + Name2 + " loves to eat " + orange;
 }
 
 eatFood(Z, G, food);
@@ -259,7 +260,7 @@ console.log(eatFood(Z, G, food));
  *  #14
  *  Function - repeater
  *
- *  This function will return a string to that repeats one of the phrases
+ *  This function will return a string that repeats one of the phrases
  *  below `X` amount of times, where `X` is the value stored at `howMany`.
  *  Inside of this function it will check if
  *  the value of `canDrinkBeer`, if the value is true
@@ -267,14 +268,19 @@ console.log(eatFood(Z, G, food));
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
- function howMany(X){
- 	if(X == true){
- 		return "Bacon Pancakes, makin' Bacon Pancakes..."
+ function repeater(){
+ 	var msg;
+ 	if(canDrinkBeer === true){
+ 		msg = "Bacon Pancakes, makin' Bacon Pancakes...";
  	}else{
- 		return "Let it go.... LET IT GOOOOOOoOoOoOo..."
+ 		msg = "Let it go.... LET IT GOOOOOOoOoOoOo...";
  	}
+ 	for (var i = 0; i < howMany; i++)
+ 		console.log(msg);
+ 	return;
  }
- howMany(canDrinkBeer);
- console.log(howMany(canDrinkBeer));
+repeater();
+
+ 
  
 //WHEN COMPLETE USE GIT COMMANDS: git status > git add filename > git status > git commit -m "message" > git status > git push > git status
